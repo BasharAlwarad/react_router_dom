@@ -1,57 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Routes, Route, NavLink, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import Home from './pages/Home';
 
 import Contact from './pages/Contact';
 import About from './pages/About';
-import Second from './components/SeondRouts';
+import Second from './components/SecondRouts';
 import Users from './pages/Users';
 import User from './pages/User';
 import Error from './pages/Error';
-import Features from './components/Features';
 import Info from './components/Info';
+import Nav from './components/Nav'
+import Address from './components/Address';
 
 function App() {
-  const Nav = () => {
-    const navLinkStyles = ({ isActive }) => {
-      return {
-        fontWeight: isActive ? 'bold' : 'normal',
-        color: isActive ? 'red' : 'black',
-      };
-    };
-    return (
-      <nav>
-        <ul>
-          <li>
-            <NavLink style={navLinkStyles} to={'/'}>
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink style={navLinkStyles} to={'about'}>
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink style={navLinkStyles} to={'/contact'}>
-              Contact
-            </NavLink>
-          </li>
-          <li>
-            <NavLink style={navLinkStyles} to={'/users'}>
-              Users
-            </NavLink>
-          </li>
-          <li>
-            <NavLink style={navLinkStyles} to={'/search'}>
-              Search
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-    );
-  };
+  
   return (
     <>
       <BrowserRouter>
@@ -60,10 +22,10 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
-          <Route path='/users' element={<Users names={name} id={id} />} />
+          <Route path='/users' element={<Users />} />
           <Route path='/users/:id' element={<User />}>
             <Route index element={<Home />} />
-            <Route path='features' element={<Features />} />
+            <Route path='address' element={<Address />} />
             <Route path='info' element={<Info />} />
           </Route>
           <Route path='/*' element={<Error />} />

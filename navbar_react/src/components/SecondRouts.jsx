@@ -1,8 +1,7 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import About from '../pages/About';
 
-const SeondRouts = () => {
+const SecondRouts = () => {
   return (
     <Routes>
       <Route path='/' element={<About />} />
@@ -10,4 +9,4 @@ const SeondRouts = () => {
   );
 };
 
-export default SeondRouts;
+export default SecondRouts;

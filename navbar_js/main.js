@@ -3,9 +3,7 @@
 // if (currentURL !== targetURL) {
 //   window.location.replace(targetURL);
 // }
-import { x } from './bashar-router-dom.js';
 
-x();
 const doc = (e) => document.getElementById(e);
 
 const home = doc('home');
