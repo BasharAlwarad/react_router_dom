@@ -72,6 +72,11 @@ const Nav = () => {
             Users
           </NavLink>
         </li>
+        <li>
+          <NavLink className={navLinkStyles} to="search">
+            search
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
